@@ -1,4 +1,4 @@
-# OptionsHandler
+# JavaScript function options handler
 Enables a combination of named parameters, default values and order-defined values, for easy-to-read function invocation.
 
 OptionsHandler is an extremely small and simple library to allow a function to take both an options object (named parameters) as well as primitive arguments where their indices map to specific option properties.
