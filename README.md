@@ -11,11 +11,11 @@ This enables any method to be called in the preferred way. For instance an XHR-o
 2. Use the rest-operator (...) to gather all arguments that are passed to your function in a specifications-array.
 
 3. Call OptionsHandler.build({}) with an object containing the following properties:
-...... specs: The array of arguments to your function, built by the rest-operator.
-...... default_options: An object with any default options you would like to use.
-...... named_specs: An array which names the special arguments in the expected order.
+    specs: The array of arguments to your function, built by the rest-operator.
+    default_options: An object with any default options you would like to use.
+    named_specs: An array which names the special arguments in the expected order.
 
-# Example
+# Template
 ```js
 function doSomething (...specs) {
   const options = OptionsHandler.build({
@@ -29,3 +29,37 @@ function doSomething (...specs) {
 Now, options consists of a merge between the default options, any options passed in as an object and most importantly, if the first argument was not an object it's value will be set in the argOneKey-property of options, and similar for the rest.
     
 You may pass several objects with option-properties, but you should always pass the primitive arguments first, and end with one or more ojects.
+
+# An example
+```js
+function xhr (...specs) {
+  const options = OptionsHandler.build({
+    specs,
+    default_options: { 
+        method: 'get',
+        responseType: 'json',
+    },
+    named_specs: ['url', 'method', 'responseType']
+  })
+
+  // Implementation ...
+}
+```
+
+xhr may now be called in any of the following ways.
+```js
+    xhr({
+        method: 'get',
+        url: 'api/users',
+        responseType: 'json',
+    })
+
+    xhr('api/users', 'get', 'json')
+
+    xhr('api/users')
+    
+    xhr('api/users', 'get', {
+        responseType: 'json'
+    })
+```
+
