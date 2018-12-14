@@ -11,9 +11,9 @@ This enables any method to be called in the preferred way. For instance an XHR-f
 2. Use the rest-operator (...) to gather all arguments that are passed to your function in a specifications-array.
 
 3. Call OptionsHandler.build({}) with an object containing the following properties:
-  *specs: The array of arguments to your function, built by the rest-operator.
-  *defaultOptions: An object with any default options you would like to use.
-  *namedOptions: An array which names the special arguments in the expected order.
+  * specs: The array of arguments to your function, built by the rest-operator.
+  * defaultOptions: An object with any default options you would like to use.
+  * namedOptions: An array which names the special arguments in the expected order.
 
 # Template
 ```js
