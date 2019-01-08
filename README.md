@@ -5,12 +5,19 @@ OptionsHandler is an extremely small and simple library to allow a function to t
 
 This enables any method to be called in the preferred way. For instance an XHR-function might accept an object specifying url and method, but sometimes you might want to pass in the url as a string as the first argument.
 
+# Installation
+You can pull in the code through npm, or just copy the contents and importing the code manually.
+
+## Through npm
+```npm install @krisell/options-handler```
+
+## By importing code
+Include OptionsHandler.js in your project however you like. If you don't use ES6-modules, leave out the "export default OptionsHandler". The library do use ES6-syntax however and transpilation may be needed.
+
 # How to use
-1. Import/include the OptionsHandler however you like. If you don't use ES6-modules, leave out the "export default OptionsHandler". The library do use ES6-syntax however and transpilation may be needed.
+1. Use the rest-operator (```...```) to gather all arguments that are passed to your function in a specifications-array.
 
-2. Use the rest-operator (```...```) to gather all arguments that are passed to your function in a specifications-array.
-
-3. Call ```OptionsHandler.build({})``` with an object containing the following properties:
+2. Call ```OptionsHandler.build({})``` with an object containing the following properties:
      * specs: The array of arguments to your function, built by the rest-operator.
      * defaultOptions: An object with any default options you would like to use.
      * namedOptions: An array which names the special arguments in the expected order.
