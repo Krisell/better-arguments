@@ -1,0 +1,29 @@
+{
+  "name": "@krisell/options-handler",
+  "version": "1.0.0",
+  "description": "JavaScript function options handler",
+  "main": "OptionsHandler.js",
+  "scripts": {
+    "test": "jest",
+    "prepublish": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krisell/OptionsHandler.git"
+  },
+  "author": "Martin Krisell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Krisell/OptionsHandler/issues"
+  },
+  "homepage": "https://github.com/Krisell/OptionsHandler#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "regenerator-runtime": "^0.13.1"
+  }
+}
