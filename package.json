@@ -1,6 +1,6 @@
 {
   "name": "@krisell/options-handler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JavaScript function options handler",
   "main": "OptionsHandler.js",
   "scripts": {
