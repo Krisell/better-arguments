@@ -42,6 +42,18 @@ test('It can be called with an options object as named parameters', () => {
     fn({ name: 'Martin', animal: 'Cat', car: 'RR' })
 })
 
+test('Passing primitive arguments but without namedOptions set does not throw an error', () => {
+    const fn = (...specs) => {
+        const options = OptionsHandler.build({ specs })
+
+        expect(options.name).toBe(undefined)
+        expect(options.animal).toBe(undefined)
+        expect(options.car).toBe(undefined)
+    }
+
+    fn('hej', 'hoj', 'haj')
+})
+
 test('Specified arguments overrides default ones', () => {
     const fn = (...specs) => {
         const options = OptionsHandler.build({ 
@@ -72,3 +84,5 @@ test('It handles a mix of arguments, prioritizing later objects', () => {
 
     fn('Martin', 'Cat', { name: 'Krisell', animal: 'Dog' }, { animal: 'Cow' }, { car: 'A big one' })
 })
+
+

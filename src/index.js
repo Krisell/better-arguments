@@ -8,7 +8,9 @@ const OptionsHandler = {
      */
     specs.forEach((spec, index) => {
       if (typeof spec !== 'object' && typeof spec !== 'function') {
-        options[namedOptions[index]] = spec
+        if ((namedOptions || []).length >= index + 1) {
+          options[namedOptions[index]] = spec  
+        }
       }
 
       if (typeof spec === 'object') {
