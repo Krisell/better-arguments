@@ -1,4 +1,4 @@
-import OptionsHandler from './OptionsHandler'
+import OptionsHandler from '../lib/index.js'
 
 test('It sets default arguments', () => {
     const fn = (...specs) => {
