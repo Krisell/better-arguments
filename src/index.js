@@ -1,4 +1,4 @@
-const OptionsHandler = {
+const BetterArguments = {
   build ({ specs, defaultOptions, namedOptions }) {
     let options = Object.assign({}, defaultOptions || {})
 
@@ -22,5 +22,5 @@ const OptionsHandler = {
   }
 }
 
-export default OptionsHandler
+export default BetterArguments
 

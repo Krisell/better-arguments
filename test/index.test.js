@@ -1,8 +1,8 @@
-import OptionsHandler from '../lib/index.js'
+import BetterArguments from '../lib/index.js'
 
 test('It sets default arguments', () => {
     const fn = (...specs) => {
-        const options = OptionsHandler.build({
+        const options = BetterArguments.build({
             specs,
             defaultOptions: { one: 1, two: 2, three: 4 },
         })
@@ -17,7 +17,7 @@ test('It sets default arguments', () => {
 
 test('It allows for named options', () => {
     const fn = (...specs) => {
-        const options = OptionsHandler.build({
+        const options = BetterArguments.build({
             specs,
             namedOptions: ['name', 'animal']
         })
@@ -32,7 +32,7 @@ test('It allows for named options', () => {
 
 test('It can be called with an options object as named parameters', () => {
     const fn = (...specs) => {
-        const options = OptionsHandler.build({ specs })
+        const options = BetterArguments.build({ specs })
 
         expect(options.name).toBe('Martin')
         expect(options.animal).toBe('Cat')
@@ -44,7 +44,7 @@ test('It can be called with an options object as named parameters', () => {
 
 test('Passing primitive arguments but without namedOptions set does not throw an error', () => {
     const fn = (...specs) => {
-        const options = OptionsHandler.build({ specs })
+        const options = BetterArguments.build({ specs })
 
         expect(options.name).toBe(undefined)
         expect(options.animal).toBe(undefined)
@@ -56,7 +56,7 @@ test('Passing primitive arguments but without namedOptions set does not throw an
 
 test('Specified arguments overrides default ones', () => {
     const fn = (...specs) => {
-        const options = OptionsHandler.build({ 
+        const options = BetterArguments.build({ 
             specs,
             defaultOptions: { name: 'Martin', animal: 'Cat', car: 'Toyota' }
         })
@@ -71,7 +71,7 @@ test('Specified arguments overrides default ones', () => {
 
 test('It handles a mix of arguments, prioritizing later objects', () => {
     const fn = (...specs) => {
-        const options = OptionsHandler.build({ 
+        const options = BetterArguments.build({ 
             specs,
             defaultOptions: { name: 'Martin', animal: 'Cat', car: 'Toyota' },
             namedOptions: ['name', 'animal']
