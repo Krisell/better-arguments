@@ -1,7 +1,7 @@
 {
-  "name": "@krisell/options-handler",
+  "name": "@krisell/better-arguments",
   "version": "1.1.0",
-  "description": "JavaScript function options handler",
+  "description": "Improved JavaScript function arguments",
   "main": "lib/index.js",
   "scripts": {
     "test": "npm run build && jest",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Krisell/OptionsHandler.git"
+    "url": "git+https://github.com/Krisell/better-arguments.git"
   },
   "author": "Martin Krisell",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Krisell/OptionsHandler/issues"
+    "url": "https://github.com/Krisell/better-arguments/issues"
   },
-  "homepage": "https://github.com/Krisell/OptionsHandler#readme",
+  "homepage": "https://github.com/Krisell/better-arguments#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
