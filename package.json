@@ -19,12 +19,12 @@
   },
   "homepage": "https://github.com/Krisell/better-arguments#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.6.0",
-    "babel-preset-env": "^1.7.0",
-    "cross-env": "^5.2.0",
-    "jest": "^23.6.0",
-    "regenerator-runtime": "^0.13.1"
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "babel-jest": "^26.6.3",
+    "@babel/preset-env": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "jest": "^26.6.3",
+    "regenerator-runtime": "^0.13.7"
   }
 }
